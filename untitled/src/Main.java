@@ -4,6 +4,7 @@ import javafx.util.Pair;
 
 import java.awt.Container;
 import java.awt.EventQueue;
+import java.io.File;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
@@ -61,7 +62,7 @@ class Piece {
      */
 }
 class DisplayImage extends JFrame {
-
+    String path = new File("").getAbsolutePath() + "\\src\\pic\\chessboard.png";
     public DisplayImage() {
 
         initUI();
@@ -83,8 +84,7 @@ class DisplayImage extends JFrame {
 
     private ImageIcon loadImage() {
 
-        ImageIcon ii = new ImageIcon("C:\\Users\\Asus\\IdeaProjects\\untitled\\src\\pic\\chessboard.png");
-
+        ImageIcon ii = new ImageIcon(path);
         return ii;
     }
 
